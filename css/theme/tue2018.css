@@ -1,0 +1,448 @@
+/**
+ * A unofficial theme in the 2018 style for the University of Technology Eindhoven
+ * by Ferry Timmers, November 2018, licensed under the MIT license
+ */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i");
+section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
+  color: #ffffff; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background-color: #f1efef;
+  background: url("../../images/TUe-logo.svg") right 1.75vh bottom 1.75vh/auto 10.5vh no-repeat, #f1efef url("../../images/TUe-white.svg") bottom/auto 14vh no-repeat;
+  background-color: #f1efef; }
+
+.reveal {
+  font-family: "Calibri", "Fira Sans", Helvetica, sans-serif;
+  font-size: 31px;
+  font-weight: normal;
+  color: #101073; }
+
+::selection {
+  color: #ffffff;
+  background: #d60270;
+  text-shadow: none; }
+
+::-moz-selection {
+  color: #ffffff;
+  background: #d60270;
+  text-shadow: none; }
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 25px 0;
+  color: #101073;
+  font-family: "Calibri", "Fira Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 2.5em; }
+
+.reveal h2 {
+  font-size: 1.8em; }
+
+.reveal h3 {
+  font-size: 1.4em; }
+
+.reveal h4 {
+  font-size: 1.25em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 25px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 25px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 25px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace;
+  text-transform: none; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #0066cc;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #00a2de;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #004080; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #101073;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #0066cc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: #0066cc; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #0066cc; }
+
+.reveal .progress span {
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #f1efef; } }
+
+/*********************************************
+ * THEME-SPECIFIC CSS
+ *********************************************/
+.reveal .controls {
+  left: calc(12px + 10em);
+  right: unset; }
+
+.reveal section:not(.centered), .reveal section:not(.centered) h1, .reveal section:not(.centered) h2, .reveal section:not(.centered) h3, .reveal section:not(.centered) h4, .reveal section:not(.centered) h5, .reveal section:not(.centered) h6 {
+  text-align: left; }
+
+.reveal div.columns,
+.reveal div.rows {
+  display: flex;
+  flex-wrap: nowrap;
+  row-gap: .5em; }
+  .reveal div.columns > *,
+  .reveal div.rows > * {
+    flex: 1; }
+
+.reveal div.columns {
+  flex-direction: row; }
+  .reveal div.columns > * {
+    padding-right: 1em; }
+
+.reveal div.rows {
+  flex-direction: column; }
+  .reveal div.rows > * {
+    padding-bottom: 1em; }
+
+html.overview body {
+  background-color: #101073;
+  background: url("../../images/TUe-logo-line.svg") right 0vh top 0vh/auto 14vh no-repeat, #101073 url("../../images/TUe-white.svg") top/auto 14vh no-repeat; }
+
+html.overview .reveal section {
+  margin-top: 2em; }
+  html.overview .reveal section, html.overview .reveal section h1, html.overview .reveal section h2, html.overview .reveal section h3, html.overview .reveal section h4, html.overview .reveal section h5, html.overview .reveal section h6 {
+    color: #ffffff; }
+
+html.title1 body {
+  background-color: #f1efef;
+  background: url("../../images/TUe-logo-line.svg") right 0vh top 0vh/auto 14vh no-repeat, url("../../images/TUe-white.svg") top/auto 14vh no-repeat, url("../../images/TUe-white.svg") bottom/auto 14vh no-repeat, url("../../images/TUe-red2.svg") left 0 bottom 14vh/auto 32vh no-repeat, #f1efef url("../../images/title1.png") center/auto 74vh no-repeat; }
+
+html.title2 body {
+  background-color: #f1efef;
+  background: url("../../images/TUe-logo-line.svg") right 0vh top 0vh/auto 14vh no-repeat, url("../../images/TUe-white.svg") top/auto 14vh no-repeat, url("../../images/TUe-white.svg") bottom/auto 14vh no-repeat, url("../../images/TUe-red.svg") left 0 bottom 14vh/auto 32vh no-repeat, #f1efef url("../../images/title2.png") left calc(150vw - 150vmax) top -32vh/cover no-repeat; }
+
+.reveal .slides section[data-state*=title] {
+  margin-top: 14.2em;
+  margin-top: calc(14.2em + (25vmax - 25vw));
+  font-size: .7em; }
+  .reveal .slides section[data-state*=title], .reveal .slides section[data-state*=title] h1, .reveal .slides section[data-state*=title] h2, .reveal .slides section[data-state*=title] h3, .reveal .slides section[data-state*=title] h4, .reveal .slides section[data-state*=title] h5, .reveal .slides section[data-state*=title] h6 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    line-height: 1em; }
+
+.reveal ul {
+  font-size: .85em; }
+
+.reveal table {
+  font-size: .8em;
+  margin: 1em auto; }
+
+.reveal table th {
+  background-color: #c81919;
+  color: #ffffff;
+  border: none;
+  font-weight: bold; }
+
+.reveal table td {
+  border-bottom-width: 2px; }
+
+.reveal table.dark th {
+  background-color: #101073; }
+
+.reveal table.dark td {
+  background-color: #c81919;
+  color: #ffffff;
+  border-color: #ffffff; }
+
+.reveal .align-left th, .reveal .align-left td,
+.reveal tr.align-left th,
+.reveal tr.align-left td {
+  text-align: left; }
+
+.reveal .align-1-left :nth-child(1) {
+  text-align: left; }
+
+.reveal .align-2-left :nth-child(2) {
+  text-align: left; }
+
+.reveal .align-3-left :nth-child(3) {
+  text-align: left; }
+
+.reveal .align-4-left :nth-child(4) {
+  text-align: left; }
+
+.reveal .align-5-left :nth-child(5) {
+  text-align: left; }
+
+.reveal .align-6-left :nth-child(6) {
+  text-align: left; }
+
+.reveal .align-7-left :nth-child(7) {
+  text-align: left; }
+
+.reveal .align-8-left :nth-child(8) {
+  text-align: left; }
+
+.reveal .align-9-left :nth-child(9) {
+  text-align: left; }
+
+.reveal .align-right th, .reveal .align-right td,
+.reveal tr.align-right th,
+.reveal tr.align-right td {
+  text-align: right; }
+
+.reveal .align-1-right :nth-child(1) {
+  text-align: right; }
+
+.reveal .align-2-right :nth-child(2) {
+  text-align: right; }
+
+.reveal .align-3-right :nth-child(3) {
+  text-align: right; }
+
+.reveal .align-4-right :nth-child(4) {
+  text-align: right; }
+
+.reveal .align-5-right :nth-child(5) {
+  text-align: right; }
+
+.reveal .align-6-right :nth-child(6) {
+  text-align: right; }
+
+.reveal .align-7-right :nth-child(7) {
+  text-align: right; }
+
+.reveal .align-8-right :nth-child(8) {
+  text-align: right; }
+
+.reveal .align-9-right :nth-child(9) {
+  text-align: right; }
+
+.reveal .align-center th, .reveal .align-center td,
+.reveal tr.align-center th,
+.reveal tr.align-center td {
+  text-align: center; }
+
+.reveal .align-1-center :nth-child(1) {
+  text-align: center; }
+
+.reveal .align-2-center :nth-child(2) {
+  text-align: center; }
+
+.reveal .align-3-center :nth-child(3) {
+  text-align: center; }
+
+.reveal .align-4-center :nth-child(4) {
+  text-align: center; }
+
+.reveal .align-5-center :nth-child(5) {
+  text-align: center; }
+
+.reveal .align-6-center :nth-child(6) {
+  text-align: center; }
+
+.reveal .align-7-center :nth-child(7) {
+  text-align: center; }
+
+.reveal .align-8-center :nth-child(8) {
+  text-align: center; }
+
+.reveal .align-9-center :nth-child(9) {
+  text-align: center; }

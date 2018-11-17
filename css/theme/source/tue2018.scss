@@ -1,0 +1,218 @@
+/**
+ * A unofficial theme in the 2018 style for the University of Technology Eindhoven
+ * by Ferry Timmers, November 2018, licensed under the MIT license
+ */
+
+ // Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Color definitions
+$tueWhite:  #ffffff;
+$tueWhite2: #f1efef;
+$tueRed:    #c81919;
+$tueRed2:   #610301;
+$tuePink:   #d60270;
+$tueBlue:   #101073;
+$tueBlue2:  #0066cc;
+$tueBlue3:  #00a2de;
+$tueGreen:  #84d200;
+$tueGreen2: #34a958;
+$tueYellow: #cedf00;
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i');
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: $tueWhite2;
+
+$mainFont: 'Calibri', 'Fira Sans', Helvetica, sans-serif;
+$mainFontSize: 31px;
+$mainColor: $tueBlue;
+
+$blockMargin: 25px;
+
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Calibri', 'Fira Sans', Helvetica, sans-serif;
+$headingColor: $tueBlue;
+$headingTextTransform: none;
+$headingFontWeight: bold;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.8em;
+$heading3Size: 1.4em;
+$heading4Size: 1.25em;
+
+$linkColor: $tueBlue2;
+$linkColorHover: $tueBlue3;
+
+$selectionBackgroundColor: $tuePink;
+$selectionColor: $tueWhite;
+
+// Background generators -----------------------
+
+// Logo bar setup
+$barHeight: 14vh;
+
+@function bh($value) {
+	@return $barHeight * $value;
+}
+
+$bottomBar: url('../../images/TUe-white.svg') bottom / auto bh(1) no-repeat;
+$topBar: url('../../images/TUe-white.svg') top / auto bh(1) no-repeat;
+$bottomLogo: url('../../images/TUe-logo.svg') right bh(1/8) bottom bh(1/8) / auto bh(6/8) no-repeat;
+$topLogo: url('../../images/TUe-logo-line.svg') right bh(0) top bh(0) / auto bh(1) no-repeat;
+
+// Default background
+@mixin bodyBackground() {
+	background-color: $tueWhite2;
+	background: $bottomLogo, $tueWhite2 $bottomBar;
+}
+
+// Overview slide background
+@mixin overviewBackground() {
+	background-color: $tueBlue;
+	background: $topLogo, $tueBlue $topBar;
+}
+
+// Title card background -- style 1
+@mixin title1Background() {
+	$titleImage: url('../../images/title1.png') center / auto (102vh - bh(2)) no-repeat;
+	$overlay: url('../../images/TUe-red2.svg') left 0 bottom bh(1) / auto 32vh no-repeat;
+	background-color: $tueWhite2;
+	background: $topLogo, $topBar, $bottomBar, $overlay, $tueWhite2 $titleImage;
+}
+
+// Title card background -- style 2
+@mixin title2Background() {
+	$titleImage: url('../../images/title2.png') left calc(150vw - 150vmax) top -32vh / cover no-repeat;
+	$overlay: url('../../images/TUe-red.svg') left 0 bottom bh(1) / auto 32vh no-repeat;
+	background-color: $tueWhite2;
+	background: $topLogo, $topBar, $bottomBar, $overlay, $tueWhite2 $titleImage;
+}
+
+// ---------------------------------------------
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: $tueWhite;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+/*********************************************
+ * THEME-SPECIFIC CSS
+ *********************************************/
+
+// Move the controls to the left side of the screen
+.reveal .controls {
+	left: calc(12px + 10em);
+	right: unset;
+}
+
+// Force left alignment (use section "class centered" for default behavior)
+.reveal section:not(.centered) {
+	&, h1, h2, h3, h4, h5, h6 {
+		text-align: left;
+	}
+}
+
+// Additional layout support
+
+.reveal div.columns,
+.reveal div.rows {
+	display: flex;
+	flex-wrap: nowrap;
+	row-gap: .5em;
+	& > * {
+		flex: 1;
+	}
+}
+.reveal div.columns {
+	flex-direction: row;
+	& > * {
+		padding-right: 1em;
+	}
+}
+.reveal div.rows {
+	flex-direction: column;
+	& > * {
+		padding-bottom: 1em;
+	}
+}
+
+// Custom backgrounds
+
+html.overview body {
+	@include overviewBackground()
+}
+html.overview .reveal section {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: $tueWhite;
+	}
+	margin-top: 2em;
+}
+
+html.title1 body {
+	@include title1Background()
+}
+html.title2 body {
+	@include title2Background()
+}
+.reveal .slides section[data-state*=title] {
+	margin-top: 14.2em;
+	margin-top: calc(14.2em + (25vmax - 25vw));
+	font-size: .7em;
+	&, h1, h2, h3, h4, h5, h6 {
+		margin-bottom: ($blockMargin * (2/5));
+		color: $tueWhite;
+		line-height: 1em;
+	}
+}
+
+// Element customization
+
+.reveal ul {
+	font-size: .85em;
+}
+
+.reveal table {
+	font-size: .8em;
+	margin: 1em auto;
+}
+.reveal table th {
+	background-color: $tueRed;
+	color: $tueWhite;
+	border: none;
+	font-weight: bold;
+}
+.reveal table td {
+	border-bottom-width: 2px;
+}
+.reveal table.dark th {
+	background-color: $tueBlue;
+}
+.reveal table.dark td {
+	background-color: $tueRed;
+	color: $tueWhite;
+	border-color: $tueWhite;
+}
+@each $align in left right center {
+	.reveal .align-#{$align},
+	.reveal tr.align-#{$align} {
+		th,td {
+			text-align: $align;
+		}
+	}
+	@for $i from 1 to 10 {
+		.reveal .align-#{$i}-#{$align} :nth-child(#{$i}) {
+			text-align: $align;
+		}
+	}
+}
+
+ // Eof

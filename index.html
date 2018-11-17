@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/tue2018.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,33 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-state="title1">
+					<h2>Title of Presentation<br>over 2 lines</h2>
+					<h4>Subtitle of Presentation</h4>
+					<p style="text-align: right;">Author name(s)</p>
+				</section>
+
+				<section data-state="overview">
+					<h3>Overview</h3>
+					Some text<br>
+					<ul>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Slide1</h3>
+				</section>
+
+				<section>
+					<h3>Slide2</h3>
+				</section>
+
+				<section class="centered" data-state="overview">
+					<h1 style="margin-top: calc(25% - 1em);">Questions?</h1>
+				</section>
 			</div>
 		</div>
 
@@ -37,11 +62,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				// Tweak these values to fit the slides to your need. Slide width and height is in pixels.
+				center: false,
+				width: 1000,
+				height: 562,
+				margin: 0.125,
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
 		</script>
