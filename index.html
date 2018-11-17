@@ -24,28 +24,191 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-state="title1">
-					<h2>Title of Presentation<br>over 2 lines</h2>
-					<h4>Subtitle of Presentation</h4>
-					<p style="text-align: right;">Author name(s)</p>
+				<section>
+					<!-- choose one of these two title cards
+					alternatively you can change the images title1 and title2.png in the images folder -->
+					<section data-state="title1">
+						<h2>Title of Presentation<br>over 2 lines</h2>
+						<h4>Subtitle of Presentation</h4>
+						<p style="text-align: right;">Author name(s)</p>
+					</section>
+
+					<section data-state="title2">
+						<h2>Title of Presentation<br>&nbsp;</h2>
+						<h4>Subtitle of Presentation</h4>
+						<p style="text-align: right;">Author name(s)</p>
+					</section>
 				</section>
 
-				<section data-state="overview">
-					<h3>Overview</h3>
-					Some text<br>
+				<section>
+					<h3>Slide title</h3>
+					Headline of a text slide with enumeration
 					<ul>
-						<li>One</li>
-						<li>Two</li>
-						<li>Three</li>
+						<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+						<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+						<ul>
+							<li>And an enumeration</li>
+							<li>that is even</li>
+							<li>one level deeper</li>
+						</ul>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Slide1</h3>
+					<section>
+						<div class="columns">
+							<!-- column 1 -->
+							<div>
+								Example of a text slide in two columns
+								<ul>
+									<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+									<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+								</ul>
+							</div>
+							<!-- column 2 -->
+							<div>
+								<br><br>
+								<ul>
+									<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+									<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+								</ul>
+							</div>
+
+						</div>
+					</section>
+
+					<section>
+						<div class="rows">
+							<!-- row 1 -->
+							<div>
+								Example of a text slide in two rows
+								<ul>
+									<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+									<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+								</ul>
+							</div>
+							<!-- row 2 -->
+							<div>
+								<ul>
+									<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+									<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+								</ul>
+							</div>
+
+						</div>
+					</section>
 				</section>
 
 				<section>
-					<h3>Slide2</h3>
+					<!-- vertical half-screen background image -->
+					<section data-background-image="images/title2.png" data-background-position="50vw 0" data-background-size="auto 86vh">
+						<div class="columns">
+							<div>
+								Example of a text slide in two columns
+								<ul>
+									<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+									<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+								</ul>
+							</div>
+
+							<div>
+							</div>
+						</div>
+					</section>
+					<!-- horizontal galf-screen background image -->
+					<section data-background-image="images/title1.png" data-background-position="0 50vh" data-background-size="100vw auto">
+						<div class="rows">
+							<div>
+								Example of a text slide in two rows
+								<ul>
+									<li>Example of an enumeration. This is fake text for illustration. Sitei labores appetere corrumpit, animal urbanitas sit ea.</li>
+									<li>Example of a second enumeration. This is fake text for illustration. Sitei labores appetere. Qui intellegat mnesarchum.</li>
+								</ul>
+							</div>
+
+							<div>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- set state to "overview" to create a "overview" slide -->
+				<section data-state="overview">
+					<h3>Chapter title of the presentation<br>put on two lines</h3>
+					Some text about the context of the chapter.
+					<ul>
+						<li>First we introduce something</li>
+						<li>then we talk about the effects of something</li>
+						<li>which problems did we encounter</li>
+						<li>and how did we solve them</li>
+					</ul>
+				</section>
+
+				<!-- There are two style when it comes to tables (see "dark").
+				Use class "align-left", "align-center" and "align-right" to set the alignment of the table cells.
+				For column specific alignment, use a number: f.i. "align-3-right" right-aligns the cells of the third row.
+				Alignment works on <table> and <tr>.
+				-->
+				<section>
+					<section>
+						Sample slide with table and text
+						<table class="align-right align-1-left">
+							<tr>
+								<th>Description</th> <th>2013</th> <th>2014</th> <th>2015</th> <th>2016</th> <th>2017</th>
+							</tr>
+							<tr>
+								<td>Item 1</td> <td>920,000</td> <td>1,120,000</td> <td>1,055,000</td> <td>1,200,000</td> <td>1,330,000</td>
+							</tr>
+							<tr>
+								<td>Item 2</td> <td>905,000</td> <td>1,105,000</td> <td>1,045,000</td> <td>1,050,000</td> <td>1,230,000</td>
+							</tr>
+							<tr>
+								<td>Item 3</td> <td>916,000</td> <td>1,116,000</td> <td>1,046,000</td> <td>1,120,000</td> <td>1,300,000</td>
+							</tr>
+						</table>
+						Tusam, qui volorup taspientendi ut rat odit, volupta sint, velesequias ent. Dolorer undusdam ent es cus, volendit molorro viducias pelendu cimenim enihicabo.
+					</section>
+					<section>
+						Sample slide with table and text in dark style
+						<table class="dark align-right align-1-left">
+							<tr>
+								<th>Description</th> <th>2013</th> <th>2014</th> <th>2015</th> <th>2016</th> <th>2017</th>
+							</tr>
+							<tr>
+								<td>Item 1</td> <td>920,000</td> <td>1,120,000</td> <td>1,055,000</td> <td>1,200,000</td> <td>1,330,000</td>
+							</tr>
+							<tr>
+								<td>Item 2</td> <td>905,000</td> <td>1,105,000</td> <td>1,045,000</td> <td>1,050,000</td> <td>1,230,000</td>
+							</tr>
+							<tr>
+								<td>Item 3</td> <td>916,000</td> <td>1,116,000</td> <td>1,046,000</td> <td>1,120,000</td> <td>1,300,000</td>
+							</tr>
+						</table>
+						Tusam, qui volorup taspientendi ut rat odit, volupta sint, velesequias ent. Dolorer undusdam ent es cus, volendit molorro viducias pelendu cimenim enihicabo.
+					</section>
+				</section>
+
+				<!-- Reveal.js supports equations in TeX format using MathJax.
+				This is loaded on demand so make sure you have an internet connection,
+				or download and install the MathJax lib instead.
+				see https://github.com/hakimel/reveal.js#mathjax -->
+				<section>
+					<h3>Title of slide</h3>
+					<p>Example of a slide with a formula</p>
+					\[
+						\begin{align}
+							e &= \sum_{n=0}^\infty \frac{1}{n!} \\
+							e^x &= \sum_{n=0}^\infty \frac{x^n}{n!}
+							
+						\end{align}
+					 \]
+					 where $n! = \prod_{i=1}^n i$ is the factorial.
+				</section>
+
+				<!-- Text is left-aligned by default; use the class "centered" to get the standard behavior.  -->
+				<section class="centered">
+					<h3>Title of slide</h3>
+					<img src="images/title2.png" class="stretch">
 				</section>
 
 				<section class="centered" data-state="overview">
@@ -62,12 +225,10 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				// Tweak these values to fit the slides to your need. Slide width and height is in pixels.
 				center: false,
 				width: 1000,
 				height: 562,
 				margin: 0.125,
-
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
