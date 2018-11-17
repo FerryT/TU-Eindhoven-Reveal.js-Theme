@@ -1,6 +1,8 @@
-# Unoffical TUe theme for reveal.js
+# Unoffical TU/e theme for reveal.js
 
 This fork of the [reveal.js](https://github.com/hakimel/reveal.js) HTML presentation framework contains a theme based on the (in 2018 released) coprorate identity (huisstijl) of the [University of Technology Eindhoven](https://tue.nl). The theme tries to match the officially provided [powerpoint templates](https://educationguide.tue.nl/studying/services/tue-corporate-identity/) as closely a possible. For convenience this is provided as a fork of the reveal.js framework rather than just the theming files; however, it can be easily applied to a fresh instance of the reveal.js framework by copying the theme's stylesheet `css/theme/tue2018.css`, the images, and optionally the `index.html` file over.
+
+__Check it out here__: [FerryT.github.io/tue-reveal.js](https://ferryt.github.io/tue-reveal.js/)
 
 ## reveal.js
 
